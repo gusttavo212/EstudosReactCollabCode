@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const App = () => {
-  return(
-    <article>
-      <h1>Hello World</h1>
-    </article>
-  );
-};
+import { Card, Name, Price, Description, Button } from './styles'
+
+//const texto = 'Hello World'
+//{texto} indica JavaScript em um JSX
+//JSX
+const App = () => (
+  <Card>
+    <Name>Curso React</Name>
+    <Price>Free</Price>
+    <Description>Curso de fazer memens avançados sa SAM.</Description>
+    <Button>Buy</Button>
+  </Card>
+);
 
 export default App;
