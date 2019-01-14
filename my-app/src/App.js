@@ -7,10 +7,10 @@ import { Card, Name, Price, Description, Button } from './styles'
 //JSX
 const App = () => (
   <Card>
-    <Name>Curso React</Name>
+    <Name>Curso SAM</Name>
     <Price>Free</Price>
     <Description>Curso de fazer memens avançados sa SAM.</Description>
-    <Button>Buy</Button>
+    <Button primary>Buy</Button>
   </Card>
 );
 
