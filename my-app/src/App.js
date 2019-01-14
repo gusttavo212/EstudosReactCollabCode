@@ -6,7 +6,10 @@ import CardCollab from './components/CardCollab';
 //{texto} indica JavaScript em um JSX
 //JSX
 const App = () => (
-  <CardCollab />
+  <CardCollab 
+  name="Curso React"
+   price="35" 
+   description="Curso básico de React utilizando styled-components ao vivo" />
 );
 
 export default App;

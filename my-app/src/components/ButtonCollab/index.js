@@ -17,7 +17,7 @@ const ButtonCollab = styled.a `
          props.primary //If ternario em JS
 /*True*/? ` 
         &:hover {
-            background-color: var(--color-zero);
+            background-color: var(--color-frist);
             color: var(--color-zero);
             border: 1px solid var(--color-zero);
         }`

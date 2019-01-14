@@ -7,11 +7,14 @@ import Description from '../../objects/Description';
 
 import ButtonCollab from '../ButtonCollab/';
 
-const CardCollab = () => (
+const CardCollab = (props) => (
      <Card>
-         <Name>Curso SAM</Name>
-        <Price>Free</Price>
-        <Description>Curso de fazer memens avançados sa SAM.</Description>
+         <Name>{props.name}</Name>
+        <Price>
+             <small>$</small>
+             {props.price}
+        </Price>
+        <Description>{props.description}</Description>
         <ButtonCollab primary>Buy</ButtonCollab>
      </Card>
 );
