@@ -12,7 +12,7 @@ const ButtonCollab = styled.a `
     cursor: pointer;
     transition: all 200ms linear;
     border: 1px solid var(--color-zero);
-
+    
     ${props =>
          props.primary //If ternario em JS
 /*True*/? ` 
@@ -24,9 +24,10 @@ const ButtonCollab = styled.a `
 /*False*/: `
             color: #838383;
             background-color: #ccc;`
+            
     };
 
-    /*& Referencia o proprio elemento*/
+    /*& Referencia o proprio elemento*/   
     
 `;
 

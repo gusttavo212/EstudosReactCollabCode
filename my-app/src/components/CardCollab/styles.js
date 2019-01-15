@@ -10,6 +10,8 @@ const Card = styled.article `
     padding-bottom: 40px;
     width: 370px;
     ${center};
+    margin-bottom: var(--spacing-big);    
+   
 `;
 
 export default Card;
