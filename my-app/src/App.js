@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import api from '../src/services/api'
 
 import CardCollab from './components/CardCollab';
 
@@ -12,37 +13,29 @@ class App extends Component {
     this.state = {};
   } Ou */
   state = {
-    courses: [
-      {
-        name: "Curso React",
-        price: 180,
-        description: "Curso básico de React utilizando styled-components ao vivo"
-      },
-      {
-        name: "Curso VueJs",
-        price:230,
-        description:"Curso do VueJs",
-      },
-      {       
-        price:100,
-        description:"Curso básico de Ember",
-      }
-    ]
+    courses: [],   
   };
+
+  componentDidMount() {//Metodo executado quando o componente é exibido
+   this.loadCards();
+  }
+
+  loadCards = async () =>{
+    const response = await api.get('/cards');
+    const courses = {courses: response.data.docs};//Pegas os dados do curso que estão em docs
+    this.setState(courses); // Pegando todo o json de courses novamente e atualizando o estado cm ele
+  }
   render(){
     return (    
       <Fragment>   
-        {this.state.courses.map(({name = "indisponivel" ,price, description}) => {
-            //destructing
-            //const {name ,price, description} = course;            
-            return(
+        {this.state.courses.map(course => (
+            //destructing           
               <CardCollab
-              name={name}
-              price={price}
-              description={description}
+              {...course}
+              key={course._id}
               />     
-            );
-        })}
+            
+        ))};
         
       </Fragment> 
       )
